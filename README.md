@@ -21,10 +21,15 @@ Descrição: Script customizado para limpeza e ganho de performance em sistemas 
 Tecnologias: Shell/Batch.
 
 🌐 GitHub Pages e Apresentação
+
 Link do Portfólio (Web): https://flaviogabriel2030.github.io/github-pages/.
+
 Vídeo de Apresentação (YouTube): [Insira aqui o link do seu vídeo de 5 minutos].
 
 🤝 Contato e Conectividade
+
 O conteúdo deste repositório está integrado ao meu perfil profissional no LinkedIn para facilitar o compartilhamento com recrutadores e parceiros da área de TI.
+
 LinkedIn: [Insira o link do seu perfil aqui]
+
 E-mail: [Seu e-mail aqui]
