@@ -6,168 +6,140 @@
     <title>Portfólio - Flávio Gabriel</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --bg-color: #f8f9fa;
-            --text-color: #333;
+            --bg-color: #121212;
+            --section-bg: #1e2024;
+            --accent-color: #00e5ff;
+            --accent-hover: #00b3cc;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0aab2;
+            --border-color: #33363d;
         }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
+            color: var(--text-primary);
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
         }
+
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #0f1115 0%, #1e2024 100%);
+            border-bottom: 2px solid var(--accent-color);
             color: white;
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
+            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);
         }
+
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
         }
+
         header p {
             font-size: 1.2rem;
-            margin-top: 10px;
-            color: #bdc3c7;
+            margin-top: 15px;
+            color: var(--text-secondary);
+            font-weight: 300;
         }
+
         .container {
             max-width: 900px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
+
         section {
-            background: white;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: var(--section-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
+
+        section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 229, 255, 0.4);
+        }
+
         h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 5px;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
             margin-top: 0;
+            font-size: 1.8rem;
+            position: relative;
         }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
         h3 {
-            color: var(--secondary-color);
+            color: var(--accent-color);
             margin-bottom: 5px;
+            font-size: 1.2rem;
         }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 15px; color: var(--text-secondary); }
+        li strong { color: var(--text-primary); }
+
         a {
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
         }
+
         a:hover {
-            text-decoration: underline;
+            color: var(--accent-hover);
+            text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+            text-decoration: none;
         }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
         .tags span {
-            display: inline-block;
-            background: #eee;
-            padding: 5px 10px;
-            border-radius: 15px;
+            background: #272a30;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 6px 15px;
+            border-radius: 20px;
             font-size: 0.9rem;
-            margin: 2px;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
+
+        .tags span:hover {
+            background: rgba(0, 229, 255, 0.1);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            background: var(--primary-color);
-            color: white;
-            margin-top: 40px;
-        }
-        footer a {
-            color: white;
-            margin: 0 10px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Flávio Gabriel Lourenço da Silva Garras Ribeiro</h1>
-        <p>Estudante de Ciência da Computação | CEUB</p>
-    </header>
-
-    <div class="container">
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Estudante de Ciência da Computação com background sólido em atendimento ao cliente e gestão de equipes. Busco aplicar meus conhecimentos técnicos em programação (Python e Java), infraestrutura de TI e fundamentos de cibersegurança na resolução de problemas tecnológicos.</p>
-            <p>Profissional organizado, focado em otimização de processos e com forte interesse em desenvolvimento de software e suporte técnico corporativo.</p>
-        </section>
-
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <h3>Técnicas</h3>
-            <div class="tags">
-                <span>Python (Pandas, NumPy)</span>
-                <span>Java</span>
-                <span>Manutenção de Hardware</span>
-                <span>Redes</span>
-                <span>Cibersegurança</span>
-                <span>Excel Avançado</span>
-                <span>Power BI</span>
-            </div>
-            
-            <h3>Comportamentais</h3>
-            <div class="tags">
-                <span>Comunicação Clara</span>
-                <span>Liderança</span>
-                <span>Gestão de Tempo</span>
-                <span>Resolução de Problemas</span>
-                <span>Adaptabilidade</span>
-            </div>
-        </section>
-
-        <section id="projetos">
-            <h2>Projetos em Destaque</h2>
-            <ul>
-                <li>
-                    <strong><a href="https://github.com/FlavioGabriel2030/WinOptimizer-Pro" target="_blank">WinOptimizer-Pro</a></strong><br>
-                    Script de automação desenvolvido em PowerShell/Batch voltado para a otimização de performance e limpeza profunda do Windows. Foco na redução de processos em segundo plano.
-                </li>
-                <li>
-                    <strong><a href="https://github.com/FlavioGabriel2030/CALCULADORA-MARIE-ASSEMBLE" target="_blank">Calculadora MARIE Assembly</a></strong><br>
-                    Calculadora desenvolvida em arquitetura MARIE que realiza as 4 operações básicas, aponta erro de divisão por zero e lida com números positivos e negativos.
-                </li>
-            </ul>
-        </section>
-
-        <section id="experiencia">
-            <h2>Experiência Profissional</h2>
-            <h3>Supervisor de Bar | Restaurante Peccato Bistrô (2023)</h3>
-            <p>Coordenação das atividades do bar, garantindo qualidade e padronização. Supervisão de equipe, controle de estoque e fluxo de caixa utilizando Excel. Implementação de planilhas para otimização do processo de reposição de insumos, resultando em maior eficiência operacional.</p>
-
-            <h3>Frentista | Shell Asa Sul (2022)</h3>
-            <p>Atendimento direto aos clientes com agilidade e segurança. Controle básico de caixa e apoio nas rotinas operacionais, desenvolvendo fortes habilidades de comunicação, trabalho em equipe e resolução de problemas.</p>
-        </section>
-
-        <section id="certificacoes">
-            <h2>Cursos e Certificações</h2>
-            <ul>
-                <li>Introduction to Cybersecurity – Cisco Networking Academy (2026)</li>
-                <li>Técnico em Informática (Montagem e manutenção, redes e SO) – Prime Cursos (2026)</li>
-            </ul>
-        </section>
-    </div>
-
-    <footer>
-        <p>Conecte-se comigo:</p>
-        <a href="http://www.linkedin.com/in/flávio-gabriel-lourenço-87537719b" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/FlavioGabriel2030" target="_blank">GitHub</a> | 
-        <a href="https://www.instagram.com/flavio_gabriel__/" target="_blank">Instagram</a> | 
-        <a href="mailto:garrasgabriel@gmail.com">E-mail</a>
-    </footer>
-
-</body>
-</html>
+            padding: 30px;
+            background: var(--section-bg);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
