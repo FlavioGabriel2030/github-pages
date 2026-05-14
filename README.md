@@ -30,6 +30,6 @@ Vídeo de Apresentação (YouTube): [Insira aqui o link do seu vídeo de 5 minut
 
 O conteúdo deste repositório está integrado ao meu perfil profissional no LinkedIn para facilitar o compartilhamento com recrutadores e parceiros da área de TI.
 
-LinkedIn: [Insira o link do seu perfil aqui]
+LinkedIn: www.linkedin.com/in/flávio-gabriel-lourenço-87537719b
 
-E-mail: [Seu e-mail aqui]
+E-mail: garrasgabriel@gmial.com
