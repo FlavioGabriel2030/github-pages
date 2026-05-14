@@ -2,25 +2,172 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Portfólio - Flavio Gabriel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Flávio Gabriel</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; background: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 1rem; text-align: center; }
-        section { background: #fff; padding: 20px; margin-top: 20px; border-radius: 8px; }
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #bdc3c7;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .tags span {
+            display: inline-block;
+            background: #eee;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin: 2px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--primary-color);
+            color: white;
+            margin-top: 40px;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Flavio Gabriel - Portfólio</h1>
+        <h1>Flávio Gabriel Lourenço da Silva Garras Ribeiro</h1>
+        <p>Estudante de Ciência da Computação | CEUB</p>
     </header>
-    <section>
-        <h2>Sobre Mim</h2>
-        <p>Estudante de Ciência da Computação e Técnico em Manutenção de Hardware.</p>
-        
-        <h2>Projetos</h2>
-        <ul>
-            <li><a href="https://github.com/FlavioGabriel2030/seu-repositorio">Otimizador de Windows</a></li>
+
+    <div class="container">
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Estudante de Ciência da Computação com background sólido em atendimento ao cliente e gestão de equipes. Busco aplicar meus conhecimentos técnicos em programação (Python e Java), infraestrutura de TI e fundamentos de cibersegurança na resolução de problemas tecnológicos.</p>
+            <p>Profissional organizado, focado em otimização de processos e com forte interesse em desenvolvimento de software e suporte técnico corporativo.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <h3>Técnicas</h3>
+            <div class="tags">
+                <span>Python (Pandas, NumPy)</span>
+                <span>Java</span>
+                <span>Manutenção de Hardware</span>
+                <span>Redes</span>
+                <span>Cibersegurança</span>
+                <span>Excel Avançado</span>
+                <span>Power BI</span>
+            </div>
+            
+            <h3>Comportamentais</h3>
+            <div class="tags">
+                <span>Comunicação Clara</span>
+                <span>Liderança</span>
+                <span>Gestão de Tempo</span>
+                <span>Resolução de Problemas</span>
+                <span>Adaptabilidade</span>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos em Destaque</h2>
+            <ul>
+                <li>
+                    <strong><a href="https://github.com/FlavioGabriel2030/WinOptimizer-Pro" target="_blank">WinOptimizer-Pro</a></strong><br>
+                    Script de automação desenvolvido em PowerShell/Batch voltado para a otimização de performance e limpeza profunda do Windows. Foco na redução de processos em segundo plano.
+                </li>
+                <li>
+                    <strong><a href="https://github.com/FlavioGabriel2030/CALCULADORA-MARIE-ASSEMBLE" target="_blank">Calculadora MARIE Assembly</a></strong><br>
+                    Calculadora desenvolvida em arquitetura MARIE que realiza as 4 operações básicas, aponta erro de divisão por zero e lida com números positivos e negativos.
+                </li>
             </ul>
-    </section>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            <h3>Supervisor de Bar | Restaurante Peccato Bistrô (2023)</h3>
+            <p>Coordenação das atividades do bar, garantindo qualidade e padronização. Supervisão de equipe, controle de estoque e fluxo de caixa utilizando Excel. Implementação de planilhas para otimização do processo de reposição de insumos, resultando em maior eficiência operacional.</p>
+
+            <h3>Frentista | Shell Asa Sul (2022)</h3>
+            <p>Atendimento direto aos clientes com agilidade e segurança. Controle básico de caixa e apoio nas rotinas operacionais, desenvolvendo fortes habilidades de comunicação, trabalho em equipe e resolução de problemas.</p>
+        </section>
+
+        <section id="certificacoes">
+            <h2>Cursos e Certificações</h2>
+            <ul>
+                <li>Introduction to Cybersecurity – Cisco Networking Academy (2026)</li>
+                <li>Técnico em Informática (Montagem e manutenção, redes e SO) – Prime Cursos (2026)</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Conecte-se comigo:</p>
+        <a href="http://www.linkedin.com/in/flávio-gabriel-lourenço-87537719b" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/FlavioGabriel2030" target="_blank">GitHub</a> | 
+        <a href="https://www.instagram.com/flavio_gabriel__/" target="_blank">Instagram</a> | 
+        <a href="mailto:garrasgabriel@gmail.com">E-mail</a>
+    </footer>
+
 </body>
 </html>
