@@ -32,4 +32,4 @@ O conteúdo deste repositório está integrado ao meu perfil profissional no Lin
 
 LinkedIn: www.linkedin.com/in/flávio-gabriel-lourenço-87537719b
 
-E-mail: garrasgabriel@gmial.com
+E-mail: garrasgabriel@gmail.com
