@@ -14,7 +14,7 @@ Para manter a organização, o repositório está dividido nas seguintes seçõe
 
 1. Website Pessoal (Versão 1.0)
 Descrição: Landing page criada para este desafio, servindo como base para o GitHub Pages.
-Tecnologias: HTML5, CSS3.Status: v1.0 finalizada e enviada ao repositório remoto.
+Tecnologias: HTML5, JavaScript, CSS3.Status: v1.0 finalizada e enviada ao repositório remoto.
 
 2. Otimizador de Windows (Batch Script)
 Descrição: Script customizado para limpeza e ganho de performance em sistemas Windows, focado em manutenção profissional.
