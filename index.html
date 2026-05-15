@@ -4,239 +4,274 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Flávio Gabriel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Variáveis de Cores e Estilos */
         :root {
-            --bg-color: #121212;
-            --section-bg: #1e2024;
-            --accent-color: #00e5ff;
-            --accent-hover: #00b3cc;
-            --text-primary: #e0e0e0;
-            --text-secondary: #a0aab2;
-            --border-color: #33363d;
+            --bg-dark: #0a0a0a;
+            --bg-card: #151515;
+            --accent: #00ffcc;
+            --accent-hover: #00b38f;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a0;
+            --border: #2a2a2a;
         }
 
-        html { scroll-behavior: smooth; }
-
+        html { scroll-behavior: smooth; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
+            background-color: var(--bg-dark); color: var(--text-main);
+            overflow-x: hidden;
         }
 
+        /* Animações CSS */
+        .fade-in {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Navbar */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(10px);
+            padding: 15px 0; text-align: center; z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+        nav a {
+            color: var(--text-main); text-decoration: none;
+            margin: 0 15px; font-weight: 600; font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--accent); }
+
+        /* Cabeçalho / Hero Section */
         header {
-            background: linear-gradient(135deg, #0f1115 0%, #1e2024 100%);
-            border-bottom: 2px solid var(--accent-color);
-            color: white;
-            text-align: center;
-            padding: 4rem 1rem;
-            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            letter-spacing: -1px;
-            text-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            color: var(--text-secondary);
-            font-weight: 300;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
+            min-height: 100vh; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center;
+            background: radial-gradient(circle at center, #1a1a1a 0%, var(--bg-dark) 100%);
             padding: 0 20px;
         }
+        
+        .profile-pic {
+            width: 180px; height: 180px; border-radius: 50%;
+            object-fit: cover; border: 3px solid var(--accent);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3); margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .profile-pic:hover { transform: scale(1.05); }
 
-        section {
-            background: var(--section-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+        header h1 { font-size: 3rem; margin: 10px 0; letter-spacing: 1px; }
+        
+        /* Efeito de digitação JS */
+        .typewriter {
+            font-size: 1.5rem; color: var(--accent); min-height: 30px;
+            border-right: 2px solid var(--accent); white-space: nowrap;
+            overflow: hidden; padding-right: 5px;
+            animation: blinkCursor 0.7s infinite normal;
+        }
+        @keyframes blinkCursor { from, to { border-color: transparent } 50% { border-color: var(--accent); } }
+
+        /* Container Principal */
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+
+        /* Seções e Cards */
+        section { margin-bottom: 60px; padding-top: 40px; }
+        
+        .section-title {
+            font-size: 2rem; border-bottom: 2px solid var(--border);
+            padding-bottom: 10px; margin-bottom: 30px; position: relative;
+        }
+        .section-title::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 60px; height: 2px; background: var(--accent);
         }
 
-        section:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 229, 255, 0.4);
+        .card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 25px; margin-bottom: 20px;
+            transition: transform 0.3s, border-color 0.3s;
         }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card h3 { color: var(--accent); margin-top: 0; }
+        .card .date { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; display: block; }
 
-        h2 {
-            color: var(--text-primary);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-size: 1.8rem;
-            position: relative;
+        /* Tags de Habilidades */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-tag {
+            background: #222; border: 1px solid var(--border);
+            padding: 8px 18px; border-radius: 25px; font-size: 0.95rem;
+            transition: all 0.3s; cursor: default;
         }
+        .skill-tag:hover { background: var(--accent); color: var(--bg-dark); font-weight: bold; }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent-color);
+        /* Grid de Certificações */
+        .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .cert-card {
+            background: var(--bg-card); padding: 20px; border-radius: 8px;
+            border-left: 4px solid var(--accent);
         }
+        .cert-card h4 { margin: 0 0 10px 0; color: #fff; }
+        .cert-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
 
-        h3 {
-            color: var(--accent-color);
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-
-        ul { padding-left: 20px; }
-        li { margin-bottom: 15px; color: var(--text-secondary); }
-        li strong { color: var(--text-primary); }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s ease, text-shadow 0.2s ease;
-        }
-
-        a:hover {
-            color: var(--accent-hover);
-            text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
-            text-decoration: none;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        .tags span {
-            background: #272a30;
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .tags span:hover {
-            background: rgba(0, 229, 255, 0.1);
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-        }
-
+        /* Footer */
         footer {
-            text-align: center;
-            padding: 30px;
-            background: var(--section-bg);
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            margin-top: 50px;
+            text-align: center; padding: 40px; background: var(--bg-card);
+            border-top: 1px solid var(--border); margin-top: 50px;
         }
-
-        footer a {
-            display: inline-block;
-            margin: 0 15px;
-            color: var(--text-primary);
-            font-weight: normal;
+        .social-links a {
+            color: var(--text-main); font-size: 1.5rem; margin: 0 15px;
+            transition: color 0.3s;
         }
-
-        footer a:hover { color: var(--accent-color); }
+        .social-links a:hover { color: var(--accent); }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Flávio Gabriel Lourenço da Silva Garras Ribeiro</h1>
-        <p>Estagiário de TI no Confea | Estudante de Ciência da Computação</p>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#certificacoes">Certificações</a>
+    </nav>
+
+    <header id="inicio">
+        <img src="perfil.jpeg" alt="Flávio Gabriel" class="profile-pic fade-in">
+        <h1 class="fade-in">Flávio Gabriel Lourenço</h1>
+        <div class="typewriter-container fade-in">
+            <span class="typewriter" id="typewriter-text"></span>
+        </div>
     </header>
 
     <div class="container">
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Atualmente Estagiário no <strong>Confea</strong> e estudante de Ciência da Computação no CEUB. Possuo um background sólido em atendimento ao cliente, gestão de equipes e infraestrutura de TI. Busco aplicar meus conhecimentos técnicos em programação (Python e Java) e fundamentos de cibersegurança na resolução de problemas tecnológicos complexos.</p>
+        
+        <section id="sobre" class="fade-in">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p>Estudante de Ciência da Computação com background sólido em atendimento ao cliente e gestão de equipes. Busco aplicar meus conhecimentos técnicos em programação (Python, Java e SQL), infraestrutura de TI e fundamentos de cibersegurança na resolução de problemas tecnológicos.</p>
             <p>Profissional organizado, focado em otimização de processos e com forte interesse em desenvolvimento de software e suporte técnico corporativo.</p>
-        </section>
-
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <h3>Técnicas</h3>
-            <div class="tags">
-                <span>Python (Pandas, NumPy)</span>
-                <span>Java</span>
-                <span>Manutenção de Hardware</span>
-                <span>Redes</span>
-                <span>Cibersegurança</span>
-                <span>Excel Avançado</span>
-                <span>Power BI</span>
-            </div>
             
-            <h3>Comportamentais</h3>
-            <div class="tags">
-                <span>Comunicação Clara</span>
-                <span>Liderança</span>
-                <span>Gestão de Tempo</span>
-                <span>Resolução de Problemas</span>
-                <span>Adaptabilidade</span>
+            <h3 style="margin-top: 30px; color: var(--accent);">Hard Skills</h3>
+            <div class="skills-grid">
+                <span class="skill-tag"><i class="fa-brands fa-python"></i> Python (Pandas, NumPy)</span>
+                <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
+                <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL / Oracle</span>
+                <span class="skill-tag"><i class="fa-solid fa-desktop"></i> Manutenção de Hardware</span>
+                <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Redes & Cibersegurança</span>
+                <span class="skill-tag"><i class="fa-solid fa-file-excel"></i> Excel Avançado & Power BI</span>
             </div>
         </section>
 
-        <section id="projetos">
-            <h2>Projetos em Destaque</h2>
-            <ul>
-                <li>
-                    <strong><a href="https://github.com/FlavioGabriel2030/WinOptimizer-Pro" target="_blank">WinOptimizer-Pro</a></strong><br>
-                    Script de automação desenvolvido em PowerShell/Batch voltado para a otimização de performance e limpeza profunda do Windows. Foco na redução de processos em segundo plano.
-                </li>
-                <li>
-                    <strong><a href="https://github.com/FlavioGabriel2030/CALCULADORA-MARIE-ASSEMBLE" target="_blank">Calculadora MARIE Assembly</a></strong><br>
-                    Calculadora desenvolvida em arquitetura MARIE que realiza as 4 operações básicas, aponta erro de divisão por zero e lida com números positivos e negativos.
-                </li>
-            </ul>
-        </section>
-
-        <section id="experiencia">
-            <h2>Experiência Profissional</h2>
+        <section id="experiencia" class="fade-in">
+            <h2 class="section-title">Experiência Profissional</h2>
             
-            <h3>Estagiário de TI | Confea – Conselho Federal de Engenharia e Agronomia (2026 – Presente)</h3>
-            <p>Atuação no suporte técnico e auxílio em projetos de infraestrutura, contribuindo para a eficiência tecnológica do conselho e aplicando fundamentos de redes e sistemas operacionais em um ambiente corporativo de grande escala.</p>
+            <div class="card">
+                <h3>Supervisor de Bar</h3>
+                <span class="date">Restaurante Peccato Bistrô | 2023</span>
+                <p>Coordenação das atividades do bar, garantindo qualidade e padronização. Supervisão de equipe, controle de estoque e fluxo de caixa utilizando Excel. Implementação de planilhas para otimizar o processo de reposição de insumos, resultando em maior eficiência operacional.</p>
+            </div>
 
-            <h3>Supervisor de Bar | Restaurante Peccato Bistrô (2023)</h3>
-            <p>Coordenação das atividades do bar, garantindo qualidade e padronização. Supervisão de equipe, controle de estoque e fluxo de caixa utilizando Excel. Implementação de planilhas para otimização do processo de reposição de insumos, resultando em maior eficiência operacional.</p>
-
-            <h3>Frentista | Shell Asa Sul (2022)</h3>
-            <p>Atendimento direto aos clientes com agilidade e segurança. Controle básico de caixa e apoio nas rotinas operacionais, desenvolvendo fortes habilidades de comunicação, trabalho em equipe e resolução de problemas.</p>
+            <div class="card">
+                <h3>Frentista</h3>
+                <span class="date">Shell Asa Sul | 2022</span>
+                <p>Atendimento direto aos clientes com agilidade e segurança. Controle básico de caixa e apoio nas rotinas operacionais, desenvolvendo fortes habilidades de comunicação, trabalho em equipe e resolução de problemas analíticos.</p>
+            </div>
         </section>
 
-        <section id="certificacoes">
-            <h2>Cursos e Certificações</h2>
-            <ul>
-                <li>Introduction to Cybersecurity – Cisco Networking Academy (2026)</li>
-                <li>Solve It with SQL – Oracle Academy (2026)</li>
-                <li>Técnico em Informática (Montagem e manutenção, redes e SO) – Prime Cursos (2026)</li>
-            </ul>
+        <section id="projetos" class="fade-in">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="card">
+                <h3><i class="fa-solid fa-terminal"></i> WinOptimizer-Pro</h3>
+                <p>Script de automação desenvolvido em PowerShell/Batch voltado para a otimização de performance e limpeza profunda do Windows. Foco na redução de processos em segundo plano.</p>
+                <a href="https://github.com/FlavioGabriel2030/WinOptimizer-Pro" target="_blank" style="color: var(--accent);">Ver no GitHub &rarr;</a>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-calculator"></i> Calculadora MARIE Assembly</h3>
+                <p>Calculadora desenvolvida em arquitetura MARIE que realiza as 4 operações básicas, aponta erro de divisão por zero e lida com números positivos e negativos.</p>
+                <a href="https://github.com/FlavioGabriel2030/CALCULADORA-MARIE-ASSEMBLE" target="_blank" style="color: var(--accent);">Ver no GitHub &rarr;</a>
+            </div>
         </section>
+
+        <section id="certificacoes" class="fade-in">
+            <h2 class="section-title">Cursos e Certificações</h2>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <h4>Solve It with SQL</h4>
+                    <p>Oracle Academy Cloud Program (2026)</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Sistema Eletrônico de Informações - SEI</h4>
+                    <p>Enap (2026)</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Introduction to Cybersecurity</h4>
+                    <p>Cisco Networking Academy (2026)</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Técnico em Informática</h4>
+                    <p>Prime Cursos (2026)</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Edição de Fotos e Vídeos Pleno</h4>
+                    <p>Fundação Bradesco (2021)</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Oratória e Comunicação</h4>
+                    <p>Profª. Heloisa Limeira</p>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <footer>
-        <p>Conecte-se comigo:</p>
-        <a href="http://www.linkedin.com/in/flávio-gabriel-lourenço-87537719b" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/FlavioGabriel2030" target="_blank">GitHub</a> | 
-        <a href="https://www.instagram.com/flavio_gabriel__/" target="_blank">Instagram</a> | 
-        <a href="mailto:garrasgabriel@gmail.com">E-mail</a>
+        <div class="social-links">
+            <a href="http://www.linkedin.com/in/flávio-gabriel-lourenço-87537719b" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/FlavioGabriel2030" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/flavio_gabriel__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:garrasgabriel@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p style="margin-top: 20px; color: var(--text-muted);">&copy; 2026 Flávio Gabriel. Desenvolvido com HTML, CSS e JS.</p>
     </footer>
 
+    <script>
+        // 1. Efeito Máquina de Escrever
+        const textToType = "Estudante de Ciência da Computação | Técnico em TI";
+        const typeContainer = document.getElementById('typewriter-text');
+        let index = 0;
+
+        function typeWriter() {
+            if (index < textToType.length) {
+                typeContainer.innerHTML += textToType.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50); // Velocidade da digitação
+            }
+        }
+        
+        // Inicia a digitação após um pequeno delay
+        setTimeout(typeWriter, 1000);
+
+        // 2. Efeito de Fade-In ao rolar a página (Intersection Observer)
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Anima apenas uma vez
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>
