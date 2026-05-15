@@ -172,6 +172,18 @@
             </div>
 
             <div class="card">
+                <h3>Assistente de Coordenação em Bancas de Concursos</h3>
+                <span class="date">Quadrix | Período Atual/Eventual</span>
+                <p>Responsável pelo suporte à organização e coordenação logística de processos seletivos e concursos públicos, garantindo o cumprimento de normas de segurança e sigilo institucional.</p>
+            </div>
+
+            <div class="card">
+                <h3>Membro de Banca de Heteroidentificação</h3>
+                <span class="date">Quadrix | Período Atual/Eventual</span>
+                <p>Atuação técnica em comissões de heteroidentificação, aplicando critérios legais e éticos para a validação de autodeclarações em concursos públicos, demonstrando compromisso com a integridade dos processos seletivos.</p>
+            </div>
+
+            <div class="card">
                 <h3>Supervisor de Bar</h3>
                 <span class="date">Restaurante Peccato Bistrô | 2023</span>
                 <p>Coordenação das atividades do bar, garantindo qualidade e padronização. Supervisão de equipe, controle de estoque e fluxo de caixa utilizando Excel. Implementação de planilhas para otimizar o processo de reposição de insumos, resultando em maior eficiência operacional.</p>
@@ -254,10 +266,9 @@
             }
         }
         
-        // Inicia a digitação após um pequeno delay
         setTimeout(typeWriter, 1000);
 
-        // 2. Efeito de Fade-In ao rolar a página (Intersection Observer)
+        // 2. Efeito de Fade-In ao rolar a página
         const fadeElements = document.querySelectorAll('.fade-in');
 
         const observerOptions = {
@@ -270,7 +281,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Anima apenas uma vez
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
