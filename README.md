@@ -1,4 +1,4 @@
-# 👨‍💻 Meu Portfólio Profissional - Flávio Gabriel
+# 👨‍💻 Meu Portfólio Profissional - Flávio Gabriel Lourenço
 
 Este repositório centraliza meus projetos de destaque, refletindo minha evolução desde o suporte e manutenção de sistemas até a automação de infraestrutura, engenharia de redes e análise de dados. O objetivo é apresentar minhas competências técnicas e soluções desenvolvidas para cenários reais de TI.
 
@@ -6,10 +6,12 @@ Este repositório centraliza meus projetos de destaque, refletindo minha evoluç
 Sou estudante de Ciência da Computação apaixonado por otimizar recursos e solucionar problemas complexos. Atualmente, foco meus estudos e aplicações práticas na criação de painéis de monitoramento em tempo real (Grafana/PRTG), desenvolvimento de scripts de automação (Python, Shell/Batch) e consumo de APIs REST. Tenho uma forte base técnica em arquitetura de hardware, administração de sistemas Windows e Banco de Dados (SQL).
 
 ### 📁 Estrutura do Repositório
-Para manter a organização, os projetos e estudos estão divididos nas seguintes seções:
-* `/academicos`: Projetos e desafios desenvolvidos durante a graduação.
-* `/pessoais`: Scripts de automação, otimizadores e projetos de interesse pessoal.
-* `/documentacao`: Slides, PDFs, arquitetura de soluções e materiais de apoio.
+Para facilitar a navegação e a compreensão da minha trajetória, os projetos estão organizados nas seguintes categorias:
+
+* 🏢 `/experiencia-profissional`: Soluções desenvolvidas em ambientes corporativos focadas em problemas reais (ex: Integração Grafana/PRTG).
+* 🚀 `/pessoais`: Ferramentas, scripts de automação (Shell/Batch) e projetos criados por interesse independente.
+* 🎓 `/academicos`: Desafios de engenharia de software e arquitetura de computadores desenvolvidos durante a graduação (ex: Calculadora MARIE).
+* 🖼️ `/assets`: Pasta estrutural contendo imagens, diagramas e mídias de apoio deste portfólio.
 
 ---
 
