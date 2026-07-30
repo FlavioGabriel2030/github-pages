@@ -20,11 +20,9 @@ Tecnologias: HTML5, JavaScript, CSS3.Status: v1.0 finalizada e enviada ao reposi
 Descrição: Script customizado para limpeza e ganho de performance em sistemas Windows, focado em manutenção profissional.
 Tecnologias: Shell/Batch.
 
-🌐 GitHub Pages e Apresentação
+🌐 GitHub Pages
 
 Link do Portfólio (Web): https://flaviogabriel2030.github.io/github-pages/.
-
-Vídeo de Apresentação (YouTube): vídeo de 5 minutos.
 
 🤝 Contato e Conectividade
 
