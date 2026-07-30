@@ -37,7 +37,7 @@ Para facilitar a navegação e a compreensão da minha trajetória, os projetos 
 
 ### 🌐 GitHub Pages
 Confira o meu portfólio web hospedado diretamente pelo GitHub: 
-[https://flaviogabriel2030.github.io/github-pages/](https://flaviogabriel2030.github.io/github-pages/)
+(https://flaviogabriel2030.github.io/Portifolio/)
 
 ### 🤝 Contato e Conectividade
 Sinta-se à vontade para explorar os códigos e entrar em contato para trocarmos ideias sobre infraestrutura, desenvolvimento e tecnologia!
