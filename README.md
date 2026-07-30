@@ -29,6 +29,10 @@ Para facilitar a navegação e a compreensão da minha trajetória, os projetos 
 * **Descrição:** Landing page criada para estruturação de portfólio, servindo como base para a hospedagem estática via GitHub Pages.
 * **Tecnologias:** HTML5, JavaScript, CSS3.
 
+**4. Calculadora Gráfica - MARIE Assembly**
+* **Descrição:** Projeto de arquitetura de computadores que implementa um motor de renderização gráfica nativo. Desenvolvida inteiramente em Assembly (sem instruções complexas nativas), a calculadora constrói a própria ALU para as 4 operações básicas e desenha os caracteres (números e avisos de erro) diretamente no display do simulador manipulando ponteiros de memória de vídeo.
+* **Tecnologias:** Assembly (MARIE), Arquitetura de Hardware, Lógica de Baixo Nível.
+
 ---
 
 ### 🌐 GitHub Pages
