@@ -24,8 +24,6 @@ Tecnologias: Shell/Batch.
 
 Link do Portfólio (Web): https://flaviogabriel2030.github.io/github-pages/.
 
-Vídeo de Apresentação (YouTube): vídeo de 5 minutos.
-
 🤝 Contato e Conectividade
 
 O conteúdo deste repositório está integrado ao meu perfil profissional no LinkedIn para facilitar o compartilhamento com recrutadores e parceiros da área de TI.
